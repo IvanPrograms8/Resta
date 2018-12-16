@@ -1,0 +1,8 @@
+div{
+    background-color: light yellowgreen;
+}
+
+table, th, td{
+    background-color:lightgreen;
+    border: 1px solid black;
+}

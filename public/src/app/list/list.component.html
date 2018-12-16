@@ -1,0 +1,31 @@
+
+<div>
+
+  <table>
+    <tr>
+        <th>Restaurant</th>
+        <th>Cuisine</th>
+        <th>Actions available</th>
+        <th> Testing </th>
+    </tr>
+    <tr *ngFor="let restaurant of restaurants">
+        <td>  {{restaurant.name}}     </td>
+        <td>  {{restaurant.cuisine}}     </td>
+        <td> 
+            <a [routerLink]="['/restaurant', restaurant._id]"><button>Read reviews</button></a>
+            <a [routerLink]="['/edit', restaurant._id]"><button>Update</button></a>
+            
+            <!-- // new line: -->
+            <!-- <a [routerLink]="['/delete', restaurant._id]"><button>delete</button></a> -->
+            
+            <button  *ngIf="restaurant.show" (click) = "delete(restaurant._id)">Delete</button>
+
+ 
+        </td>
+        <td> testing: {{restaurant.show}}. And always on delete button
+                <button (click) = "delete(restaurant._id)">Delete</button>
+
+        </td>
+    </tr>
+  </table>
+</div>

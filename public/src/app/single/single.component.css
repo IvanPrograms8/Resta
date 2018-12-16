@@ -1,0 +1,9 @@
+.scrollables{
+  height: 200px;
+  overflow: auto;
+}
+
+table, th, td{
+  background-color:lightgreen;
+  border: 1px solid black;
+}

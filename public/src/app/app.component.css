@@ -1,0 +1,15 @@
+* {
+    margin: 0 auto;
+}
+div {
+    width: 970px;
+}
+#header {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: lightseagreen;
+    justify-content: center;
+}
+#container {
+    background-color: slategray;
+}

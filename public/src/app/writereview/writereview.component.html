@@ -1,0 +1,32 @@
+<div>
+
+    <h3> Write a review for {{restaurant.name}} </h3>
+
+<fieldset>
+        <form (submit)="newRating(restaurant._id)">
+           <p>Your Name: <input type="text" name="newreview.name" [(ngModel)]="newreview.name" /></p>
+           <p>Stars:
+             <select name="newreview.rating" [(ngModel)]="newreview.rating">
+               <option value="5">★★★★★</option>
+               <option value="4">★★★★☆</option>
+               <option value="3">★★★☆☆</option>
+               <option value="2">★★☆☆☆</option>
+               <option value="1">★☆☆☆☆</option>
+             </select>
+           </p>
+           <p>Your review:
+             <br>
+             <textarea name="newreview.comment" [(ngModel)]="newreview.comment" cols=50 rows=5></textarea>
+           </p>
+           <input type="submit" value="Submit" />           
+        </form>
+
+        <form (submit)="cancelRating(restaurant._id)">
+            <input type="submit" value="Cancel" />
+        </form>
+          
+
+
+  </fieldset>
+
+</div>>

@@ -1,0 +1,57 @@
+<div *ngIf="restaurant">
+  <h3> Reviews for {{restaurant.name}}</h3>
+
+  <!-- <p>Cuisine: {{restaurant.cuisine}}</p> -->
+                <!-- <p>Description: {{restaurant.description}}</p> -->
+  <!-- <p>Rating: {{restaurant.avgreview}}</p> -->
+
+  <a [routerLink]="['/restaurant/review', restaurant._id]"><button>New review</button></a>
+
+<div class="scrollables">
+  <table>
+    <tr>
+      <td>Customer</td>
+      <td>Stars</td>
+      <td>Description</td>
+    </tr>
+    <tr *ngFor="let r of restaurant.reviews">  
+        <td>{{r.name}}</td>
+        <td>{{r.rating}}</td>
+        <td>{{r.comment}}</td>
+    </tr>
+  </table>
+</div>
+
+
+ 
+  <!-- Original:
+  <div class="scrollables">
+      <div *ngFor="let r of restaurant.reviews">
+    
+        <p>{{r.name}}</p>
+        <p>{{r.rating}}</p>
+        <p>{{r.comment}}</p>
+      </div>
+  </div> -->
+  
+
+  <!-- <fieldset>
+    <form (submit)="newRating(restaurant._id)">
+       <p>Name: <input type="text" name="newreview.name" [(ngModel)]="newreview.name" /></p>
+       <p>Rating:
+         <select name="newreview.rating" [(ngModel)]="newreview.rating">
+           <option value="5">★★★★★</option>
+           <option value="4">★★★★☆</option>
+           <option value="3">★★★☆☆</option>
+           <option value="2">★★☆☆☆</option>
+           <option value="1">★☆☆☆☆</option>
+         </select>
+       </p>
+       <p>Comment here!!:
+         <br>
+         <textarea name="newreview.comment" [(ngModel)]="newreview.comment" cols=50 rows=5></textarea>
+       </p>
+       <input type="submit" value="Leave a review!" />
+    </form>
+  </fieldset>
+</div> -->

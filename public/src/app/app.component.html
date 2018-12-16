@@ -1,0 +1,15 @@
+<div id="header">
+    <h1>Let's eat</h1>
+</div>
+
+<div id="container">
+
+    <div id="tabs">
+        <a [routerLink]="['/']"><button>Dashboard</button></a>
+        <a [routerLink]="['/newrestaurant']"><button>New Restaurant</button></a>
+    </div>
+
+    <router-outlet></router-outlet>
+
+</div>
+

@@ -1,0 +1,23 @@
+<form (submit)="create()">
+  <h2>Register a restaurant </h2>
+
+  <p>Restaurant name:</p>
+  <input type="text" name="restaurant.name" [(ngModel)]="restaurant.name" placeholder="">
+  <!-- <p *ngIf="errors.name"> {{errors.restaurant}}</p> -->
+
+  <p *ngIf="errors.name"> {{errors.name.message}}</p>
+  <br>
+  <p>Cuisine:</p>
+  <input type="text" name="restaurant.cuisine" [(ngModel)]="restaurant.cuisine" placeholder="">
+  <p *ngIf="errors.cuisine"> {{errors.cuisine.message}}</p>
+  <br>
+
+
+  <!-- <textarea name="restaurant.description" [(ngModel)]="restaurant.description" rows=5 cols=50></textarea>
+  <p *ngIf="errors.description"> {{errors.description.message}}</p>
+  <br> -->
+  <br>
+  <a [routerLink]="['/']"><button>Cancel</button></a>
+  <input type="submit" value="Register"/>
+
+</form>
